@@ -21,6 +21,7 @@
 <main>
   <Count score={sum} />
   <h3>Sélectionner vos biens</h3>
+
   <Select
     {items}
     isMulti={true}
@@ -28,14 +29,39 @@
     {groupBy}
     placeholder="Sélectionner"
   />
+
+  <div class="text">
+    <p>La définition de la sobriété :</p>
+    <div class="quote">
+      <q
+        ><em>
+          Le consentement délibéré pour avoir moins de choses physiques et
+          penser que cela ne nous empêche pas d'être heureux.
+        </em></q
+      >
+      <p>Jean-Marc Jancovici</p>
+    </div>
+  </div>
 </main>
 
 <style>
   :global(body) {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
   }
 
   main {
-    margin: 5rem;
+    margin: 5rem 20rem;
+  }
+
+  .text {
+    padding-top: 2rem;
+  }
+
+  .quote {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 4rem;
+    background-color: aliceblue;
   }
 </style>
